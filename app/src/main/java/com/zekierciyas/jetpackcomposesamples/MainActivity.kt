@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import com.zekierciyas.jetpackcomposesamples.ui.samples.expand_image.ExpandableImageScreen
+import com.zekierciyas.jetpackcomposesamples.ui.samples.list_view.PokemonListScreen
 import com.zekierciyas.jetpackcomposesamples.ui.theme.JetpackComposeSamplesTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +21,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.onBackground
                 ) {
-                    // PokemonListScreen()
-                    ExpandableImageScreen()
+                    PokemonListScreen()
+                    //ExpandableImageScreen()
                 }
             }
         }
