@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.zekierciyas.jetpackcomposesamples.ui.samples.image_slider.AutoImageSliderScreen
+import com.zekierciyas.jetpackcomposesamples.ui.samples.progress_loaders.ProgressLoaders
 import com.zekierciyas.jetpackcomposesamples.ui.theme.JetpackComposeSamplesTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +22,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //PokemonListScreen()
                     //ExpandableImageScreen()
-                    AutoImageSliderScreen()
+                    //AutoImageSliderScreen()
+                    ProgressLoaders()
                 }
             }
         }
