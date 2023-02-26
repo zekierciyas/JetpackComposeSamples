@@ -7,3 +7,5 @@ It is a sample project that includes single and various JetpackCompose sample sc
 * [ExpandableImageScreen](https://github.com/zekierciyas/JetpackComposeSamples/tree/main/app/src/main/java/com/zekierciyas/jetpackcomposesamples/ui/samples/expand_image) 
 
 * [AutoImageSliderScreen](https://github.com/zekierciyas/JetpackComposeSamples/tree/main/app/src/main/java/com/zekierciyas/jetpackcomposesamples/ui/samples/image_slider) 
+
+* [ProgressLoaderScreen](https://github.com/zekierciyas/JetpackComposeSamples/tree/main/app/src/main/java/com/zekierciyas/jetpackcomposesamples/ui/samples/progress_loaders)
