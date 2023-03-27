@@ -14,8 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
-private const val songUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+private const val songUrl = "https://mp3indirdurum.com/mp3dosyalari/cw==/ZQ==/sertab-erener-ask.mp3"
 
 @Composable
 fun MusicPlayer(url: String = songUrl) {
@@ -26,17 +29,26 @@ fun MusicPlayer(url: String = songUrl) {
 
     mediaPlayer.setOnPreparedListener {
         duration = it.duration
-        currentPosition = it.currentPosition
     }
 
     mediaPlayer.setOnCompletionListener {
         isPlaying = false
     }
 
-
+    //Launching new scope for fetching source as async
     LaunchedEffect(url) {
         mediaPlayer.setDataSource(url)
-        mediaPlayer.prepare()
+        mediaPlayer.prepareAsync()
+    }
+
+    //Launching scope for observing the current position of the song to reflect it to ui
+    LaunchedEffect(Unit) {
+        launch {
+            while(true) {
+                currentPosition = mediaPlayer.currentPosition
+                delay(1000)
+            }
+        }
     }
 
     Box(
